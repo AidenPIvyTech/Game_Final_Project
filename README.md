@@ -1,2 +1,4 @@
 # Game_Final_Project
-Game where a cue ball knocks other balls into a pocket with different obstacles
+Game where a cue ball knocks other balls into a pocket with different obstacles. The target users that may be interested in this project are people who enjoy playing pool and want to add a little flare to their game. Planned features that are planned is having a ball that can be hit by the player. This ball will have physics allowing it to move across the table/board, colliding with walls and moving other balls. There will also be a 8 ball or something similar that will win the game once entering the goal zone (pocket). 
+This project is planned to be constructed using Godot for the majority of the gameplay. The Godot will have all of the levels throughout the game and the code behind all of the physics calculations. A SQL database will be used to store a users game progress and if time permits, a scoring system.
+By the end of week 1, the basic structure of the game should be visible in a basic level containing the user ball and the goal ball. User controls and physics are not expected to be implemented at this time.
