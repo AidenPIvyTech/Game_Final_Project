@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1t72k6odd4xv"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y32ns"]
+a = Vector2(0, 1)
+b = Vector2(1195, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_oh6kn"]
+b = Vector2(0, -540)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgf6"]
+size = Vector2(39, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4f30"]
+size = Vector2(39.3125, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oh6kn"]
+size = Vector2(299.78125, 35)
+
+[node name="static" type="StaticBody2D"]
+position = Vector2(2, 140)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 55)
+shape = SubResource("SegmentShape2D_y32ns")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(4, 56, 1199, 56)
+width = 3.0
+default_color = Color(0.93534994, 0.33172116, 0.99999994, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_oh6kn")
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(0, 3.2000046)
+scale = Vector2(1, 1.05)
+points = PackedVector2Array(0, -517.3334, 0, -40.865646, 0, -2.0952425)
+width = 3.0
+default_color = Color(1, 0.30980393, 1, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(682.5, 13)
+shape = SubResource("RectangleShape2D_xxgf6")
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(491, 188)
+points = PackedVector2Array(172, -193, 172, -158, 211, -158, 211, -192, 170, -192)
+width = 4.0
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(673, -612)
+shape = SubResource("RectangleShape2D_y4f30")
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(482, -437)
+points = PackedVector2Array(172, -193, 172, -158, 211, -158, 211, -192, 170, -192)
+width = 4.0
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(671.8906, -192.5)
+shape = SubResource("RectangleShape2D_oh6kn")
+
+[node name="Line2D5" type="Line2D" parent="."]
+position = Vector2(350, -18)
+points = PackedVector2Array(172, -193, 172, -158, 473, -157, 473, -191, 170, -192)
+width = 4.0
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(674.28125, -385.5)
+shape = SubResource("RectangleShape2D_oh6kn")
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2(483, -211)
+points = PackedVector2Array(42, -193, 42, -158, 342, -158, 342, -192, 43, -191)
+width = 4.0
