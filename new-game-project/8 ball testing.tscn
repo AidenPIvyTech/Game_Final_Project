@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://g0l8qiyjc6pm"]
+
+[ext_resource type="Texture2D" uid="uid://olbq8714rale" path="res://Screenshot 2025-11-25 100506.png" id="1_ue1yc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iyeb5"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(226, 102)
+physics_material_override = SubResource("PhysicsMaterial_iyeb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-42, 85)
+scale = Vector2(0.07183907, 0.070312485)
+texture = ExtResource("1_ue1yc")

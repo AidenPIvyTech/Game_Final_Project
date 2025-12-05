@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://bs2qeucwtife5" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c1t72k6odd4xv" path="res://wall.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://g0l8qiyjc6pm" path="res://8 ball testing.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://b4cayowt8oakv" path="res://player.gd" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://neafyrt5gjco" path="res://ball.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dkbinqfmtna7l" path="res://catcher.tscn" id="6_7mycd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lquwl"]
+radius = 31.257
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mycd"]
+radius = 17.0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1bvp3")
+
+[node name="static" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(0, 741)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_lquwl")]
+position = Vector2(351, 325)
+script = ExtResource("4_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_lquwl")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_1bvp3")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-42, 85)
+shape = SubResource("CircleShape2D_7mycd")
+
+[node name="goal" parent="." instance=ExtResource("6_7mycd")]
