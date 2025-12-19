@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkbinqfmtna7l"]
+
+[ext_resource type="Script" uid="uid://dl63qhcmhn2hj" path="res://static and rigid/goal.gd" id="1_85uqo"]
+[ext_resource type="Texture2D" uid="uid://dh1tvjexvcuys" path="res://characters/Screenshot 2025-12-18 094052.png" id="2_htftx"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_724o2"]
+a = Vector2(100, 8)
+b = Vector2(27, 8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_85uqo"]
+a = Vector2(5, 13)
+b = Vector2(6, 49)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3nqrp"]
+a = Vector2(11, 74)
+b = Vector2(11, 110)
+
+[node name="goal" type="StaticBody2D"]
+position = Vector2(1058, 129)
+rotation = -1.5805498
+script = ExtResource("1_85uqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-128, -17)
+shape = SubResource("SegmentShape2D_724o2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-34, -57)
+shape = SubResource("SegmentShape2D_85uqo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-112, -118)
+shape = SubResource("SegmentShape2D_3nqrp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-65.00002, -27.000006)
+scale = Vector2(0.33197102, 0.3333336)
+texture = ExtResource("2_htftx")

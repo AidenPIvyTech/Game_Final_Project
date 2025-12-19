@@ -1,0 +1,132 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1t72k6odd4xv"]
+
+[ext_resource type="Script" uid="uid://cqecls80unrh2" path="res://static and rigid/wall.gd" id="1_xxgf6"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y32ns"]
+a = Vector2(-6, 1)
+b = Vector2(1195, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_oh6kn"]
+a = Vector2(-1, 57)
+b = Vector2(-1, -766)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxgf6"]
+size = Vector2(39, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4f30"]
+size = Vector2(39.3125, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oh6kn"]
+size = Vector2(299.78125, 36)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xxgf6"]
+a = Vector2(0, 1)
+b = Vector2(-8, -810)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y4f30"]
+a = Vector2(-554, -10)
+b = Vector2(639, -9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iuee5"]
+a = Vector2(195, -164)
+b = Vector2(-15, -182)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xqyih"]
+a = Vector2(1241, -21)
+b = Vector2(3, -21)
+
+[node name="static" type="StaticBody2D"]
+position = Vector2(2, 194)
+script = ExtResource("1_xxgf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 55)
+shape = SubResource("SegmentShape2D_y32ns")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-2, 56, 1199, 56)
+width = 3.0
+default_color = Color(0.93534994, 0.33172116, 0.99999994, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_oh6kn")
+debug_color = Color(0.7210436, 0.47727364, 0.12598324, 0.41960785)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(0, 3.2000046)
+scale = Vector2(1, 1.05)
+points = PackedVector2Array(-1, -732.57153, -1, 51.238083)
+width = 3.0
+default_color = Color(1, 0.30980393, 1, 1)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(674.5, -32)
+shape = SubResource("RectangleShape2D_xxgf6")
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(483, 143)
+points = PackedVector2Array(172, -193, 172, -158, 211, -158, 211, -192, 170, -192)
+width = 4.0
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(675, -644)
+shape = SubResource("RectangleShape2D_y4f30")
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(484, -469)
+points = PackedVector2Array(172, -193, 172, -158, 211, -158, 211, -192, 170, -192)
+width = 4.0
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(671.8906, -193)
+shape = SubResource("RectangleShape2D_oh6kn")
+
+[node name="Line2D5" type="Polygon2D" parent="."]
+position = Vector2(351.74942, -21.598822)
+scale = Vector2(0.9942089, 0.9714895)
+polygon = PackedVector2Array(472.98975, -157.90309, 171.24225, -157.90309, 171.24225, -194.9596, 472.98975, -194.9596)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(674.28125, -437.5)
+shape = SubResource("RectangleShape2D_oh6kn")
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2(483, -263)
+points = PackedVector2Array(42, -193, 42, -158, 342, -158, 342, -192, 43, -191)
+width = 4.0
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(1199, 57)
+shape = SubResource("SegmentShape2D_xxgf6")
+
+[node name="Line2D7" type="Line2D" parent="."]
+points = PackedVector2Array(1199, 58, 1191, -753)
+width = 3.0
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(553, -730)
+shape = SubResource("SegmentShape2D_y4f30")
+
+[node name="Line2D8" type="Line2D" parent="."]
+visibility_layer = 2
+position = Vector2(-3, -21)
+points = PackedVector2Array(2, -719, 1195, -718)
+width = 3.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+show_behind_parent = true
+position = Vector2(609, 17)
+color = Color(0.24339107, 0.42027003, 0.1675154, 1)
+polygon = PackedVector2Array(-611, 41, -610, -756, 582, -755, 590, 41)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(-242, -208)
+shape = SubResource("SegmentShape2D_iuee5")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(-15, 79)
+shape = SubResource("SegmentShape2D_xqyih")
+
+[node name="CollisionShape2D11" type="CollisionPolygon2D" parent="."]
+position = Vector2(43, 51)
+polygon = PackedVector2Array(-41, 5, -16, 4, 5, 4, 88, 3, 93, 7)
